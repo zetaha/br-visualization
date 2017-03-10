@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<h1> A Battleroyale simulation </h1>
+<p>
+Instructions:
+<ul>
+<li> Update BR evolves the state of the battleroyale. Every player will converge to the goal, that is the largest dot on the area. At each step the path towards the goal has a random perturbation. After an encounter a gray dot is left behind if the player loses.  </li>
+<li> "Participants" button resets the BR and includes a number of participants uniformly distributed in the play area. </li>
+<li> You can click on the play area to add a participant. </li>
+<li> Distance sets the distance of engage. If not specified it's set at 20.</li>
+<li> Check the console for extra informations. </li>
+<li> For your convenience I generated a number of your typical names in an online game </li>
+</ul>
+</p>
+ <div style="margin-top:40px;" id = "hunt"> <input name = "updateButton" type = "button" value="Evolve BR"/> 
+
+</div>
+ <div style="margin-top:20px;margin-bottom:20px;">
+            <input id ="firstbutton" name ="aliveButton" type="button" value="participants:" >
+            <input type="integer" id="parts" placeholder="participants number">
+ </div>
+
+ <div style="margin-top:20px;margin-bottom:20px;">
+            <input id ="secondbutton" name ="distButton" type="button" value="update distance:" >
+            <input type="integer" id="distance" placeholder="distance in pixels">
+ </div>
+
+<div id = "inGame"> Participants in game: </div>
+<div id = "encounters"> Number of encounters: </div>
+
+<div id = "br">
+<svg style="background:teal;margin-top:40px;" width="900" height="600"></svg>
+</div>
+ <script type="text/javascript" src="https://d3js.org/d3.v4.min.js"></script>
+ <script type="text/javascript" src="./br.js"></script>
+ </body>
